@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for room in empty_rooms %}
+    {{ room }}
+    {% endfor %}
+</ul>
+{% endblock %}
