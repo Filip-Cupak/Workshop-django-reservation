@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+<form>
+    <label for room_name>Room name</label>
+    <input type="text">
+<!--<br>-->
+<!--<br>-->
+    <label for room capacity>Room capacity</label>
+    <input type="number">
+<!--<br>-->
+<!--<br>-->
+    <label for projector>Projector</label>
+    <input type="checkbox">
+<br>
+<br>
+
+    <input type="submit">
+
+</form>
+{% endblock %}
