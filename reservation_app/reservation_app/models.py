@@ -5,8 +5,11 @@ from django.http import request
 class Room(models.Model):
     id = models.BigAutoField(primary_key=True)
     room_name = models.CharField(max_length=64, null=False)
-    room_capacity = models.SmallIntegerField
-    projector = models.BooleanField
+    room_capacity = models.SmallIntegerField(default=0)
+    projector = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.room_name
 
 
 # Create your models here.
