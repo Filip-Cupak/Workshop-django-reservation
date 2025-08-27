@@ -4,7 +4,7 @@ from django.http import request
 
 class Room(models.Model):
     id = models.BigAutoField(primary_key=True)
-    room_name = models.CharField(max_length=64, null=False)
+    room_name = models.CharField(max_length=64, null=False, unique=True)
     room_capacity = models.SmallIntegerField(default=0)
     projector = models.BooleanField(default=False)
 

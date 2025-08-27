@@ -2,8 +2,8 @@
 
 {% block content %}
 <ul>
-    {% for room in empty_rooms %}
-    {{ room_name }}
+    {% for room in all_rooms %}
+    <li><a href="{% url 'room_detail' room.id %}">{{ room }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}
